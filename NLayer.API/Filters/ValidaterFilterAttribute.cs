@@ -4,7 +4,7 @@ using NLayer.Core.DTOS;
 
 namespace NLayer.API.Filters
 {
-    public class ValidatorFilterAttribute : ActionFilterAttribute
+    public class ValidaterFilterAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {

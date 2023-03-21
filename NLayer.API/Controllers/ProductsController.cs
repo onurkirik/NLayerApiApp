@@ -7,7 +7,7 @@ using NLayer.Core.Services;
 
 namespace NLayer.API.Controllers
 {
-    [ValidatorFilterAttribute]
+    [ValidaterFilterAttribute]
     public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
