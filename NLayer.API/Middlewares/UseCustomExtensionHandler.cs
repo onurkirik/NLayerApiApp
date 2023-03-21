@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace NLayer.API.Middlewares
 {
-    public static class UserCustomExtensionHandler
+    public static class UseCustomExtensionHandler
     {
         public static void UserCustomException(this IApplicationBuilder app)
         {
@@ -21,6 +21,7 @@ namespace NLayer.API.Middlewares
                     var statusCode = exceptionFeature.Error switch
                     {
                         ClientSideException => 400,
+                        NotFoundException => 404,
                         _ => 500
                     };
 
@@ -32,7 +33,7 @@ namespace NLayer.API.Middlewares
 
                 });
 
-                
+
 
             });
         }
