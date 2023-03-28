@@ -1,0 +1,42 @@
+﻿@model ProductDto
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Update" method="post" asp-controller="Products">
+            <input asp-for="Id" type="hidden" />
+            <div class="form-group">
+                <label class="form-label" asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="Stock"></label>
+                <input class="form-control" asp-for="Stock" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" asp-for="Price"></label>
+                <input class="form-control" asp-for="Price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="form-label">Categories</label>
+                <select asp-for="CategoryId" asp-items="ViewBag.categories"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group float-end">
+                <input type="submit" value="Upddate" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -11,7 +11,7 @@ using NLayer.Service.Services;
 using System.Reflection;
 using Module = Autofac.Module;
 
-namespace NLayer.API.Modules
+namespace NLayer.Web.Modules
 {
     public class RepoServiceModule : Module
     {
